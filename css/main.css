@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --red: #ff3150;
+  --yellow: #ffc400;
+  --section: #eff7fa;
+  --white: white;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  background-color: var(--green);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -16px;
+}
+.navbar,
+.project,
+footer,
+.subscribe input[type="submit"] {
+  background-color: var(--dark);
+}
+.navbar ul li a:not(.active),
+.navbar-toggler {
+  color: var(--white);
+}
+.navbar ul li .active,
+.navbar .search,
+.navbar ul li a:hover {
+  color: var(--green) !important;
+}
+.navbar-toggler {
+  border-color: var(--white);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green);
+}
+.navbar .search {
+  border-left: 1px solid var(--green);
+}
+.landing {
+  min-height: calc(100vh - 72px);
+  background-color: var(--dark);
+}
+.features .icons {
+  height: 200px;
+}
+.features .icons .num {
+  color: var(--section);
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icons .sh {
+  color: var(--green);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.team,
+.work {
+  background-color: var(--section);
+}
+.work ul li a.active {
+  color: var(--yellow) !important;
+  background-color: var(--red);
+  border-radius: 0.375rem;
+}
+.work ul li a:not(.active):hover {
+  color: var(--red) !important;
+}
+.work .box {
+  padding: 5px;
+  cursor: pointer;
+}
+.work .box::before {
+  content: attr(data);
+  position: absolute;
+  background-color: hwb(178deg 20% 18% / 70%);
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4px;
+  left: 4px;
+  font-size: 1.5rem;
+  color: var(--section);
+  transition: 0.3s;
+  transform: translateX(calc(-100% - 8px));
+}
+.work .box:hover::before {
+  transform: translateX(0);
+}
+.des {
+  max-width: 500px;
+}
+.team .tit {
+  background-color: var(--green);
+}
+.subscribe input[type="email"]::placeholder {
+  text-transform: capitalize;
+  color: var(--white);
+}
+.subscribe input[type="email"]:focus {
+  outline: none;
+}
+.green {
+  color: var(--green);
+}
+.face {
+  background-color: #1877f2;
+}
+.twit {
+  background-color: #1da1f2;
+}
+.linked {
+  background-color: #0a66c2;
+}
+.social svg {
+  height: 20px;
+  width: 20px;
+}
